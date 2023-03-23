@@ -6,7 +6,7 @@
  * Descriotion: prints _putchar using putchar prototype
  *
  * Return: Always 0 (Success)
- */ 
+*/ 
 
 int main(void)
 {
