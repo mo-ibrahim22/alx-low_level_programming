@@ -1,22 +1,28 @@
+/*
+ * File: 0-putchar.c
+ * Auth: muhammad
+ *
+ */
+
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - Prints "putchar" followed by a new line.
  *
- * Descriotion: prints _putchar using putchar prototype
- *
- * Return: Always 0 (Success)
-*/ 
-
+ * Return: Always 0.
+ */
 int main(void)
 {
-	char str[] = "_putchar";
-	int ch;
-
-	for (ch = 0; ch < 8; ch++)
-		_putchar(str[ch]);
+        _putchar('0');
+        _putchar('-');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
 
 	return (0);
-
 }
