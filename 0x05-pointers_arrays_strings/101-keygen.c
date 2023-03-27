@@ -1,33 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
-  * main - entry point
-  * Description: creates a random key for program 101_crackme
-  * Return: always 0
-  */
+ * main - generates keygen.
+ * Return: 0 Always.
+ */
 int main(void)
 {
-	    int sum, i, r;
+	int r = 0, c = 0;
+	time_t t;
 
-		char decode[27] = "abcdefghijklmnopqrstuvwxyz";
-		char key[30];
-
-		sum = 0;
-		i = 0;
-
-		srand(time(NULL));
-
-		while (sum < 2772)
-		{
-			r = rand() % 10;
-			key[i] = decode[r];
-			sum += key[i];
-			i++;
-		}
-		r = 2772 - sum;
-		key[i] = r;
-		printf("%s\n",  key);
-		return (0);
+	srand((unsigned int) time(&t));
+	while (c < 2772)
+	{
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
+	}
+	printf("%c\n", (2772 - c));
+	return (0);
 }
